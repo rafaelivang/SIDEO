@@ -5,7 +5,7 @@
  */
 package org.ivsoft.run;
 
-import org.ivsoft.view.PrincipalGUI;
+import org.ivsoft.view.EntryWindowView;
 
 /**
  *
@@ -17,7 +17,7 @@ public class SIDEOLaunch {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        PrincipalGUI.launchWindow();
+        EntryWindowView.launchWindow();
     }
     
 }
