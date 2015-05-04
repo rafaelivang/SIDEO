@@ -11,18 +11,18 @@ import javax.swing.JLayeredPane;
  *
  * @author m
  */
-public class BankView extends javax.swing.JFrame {
+public class CashView extends javax.swing.JFrame {
     
     /**
      * Singleton instance
      */
-    private static BankView bankView;
+    private static CashView cashView;
 
     
     /**
      * Creates new form BankView
      */
-    private BankView() {
+    private CashView() {
         initComponents();
     }
     
@@ -32,18 +32,18 @@ public class BankView extends javax.swing.JFrame {
      */
     static JLayeredPane getPaneView()
     {
-        return getBankViewInstance().getLayeredPane();
+        return getCashViewInstance().getLayeredPane();
     }
     
-    private static BankView getBankViewInstance()
+    private static CashView getCashViewInstance()
     {
-        if (bankView == null) {
-            bankView = new BankView();
+        if (cashView == null) {
+            cashView = new CashView();
         }
         
-        return bankView;
+        return cashView;
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -57,7 +57,7 @@ public class BankView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Bank view");
+        jLabel1.setText("Cash view");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,7 +66,7 @@ public class BankView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(341, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,20 +96,20 @@ public class BankView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CashView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BankView().setVisible(true);
+                new CashView().setVisible(true);
             }
         });
     }

@@ -1,28 +1,29 @@
+package org.ivsoft.view;
+
+import javax.swing.JLayeredPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.ivsoft.view;
-
-import javax.swing.JLayeredPane;
 
 /**
  *
  * @author m
  */
-public class BankView extends javax.swing.JFrame {
-    
+public class ProductsView extends javax.swing.JFrame {
+
     /**
      * Singleton instance
      */
-    private static BankView bankView;
+    private static ProductsView productsView;
 
     
     /**
      * Creates new form BankView
      */
-    private BankView() {
+    private ProductsView() {
         initComponents();
     }
     
@@ -32,16 +33,16 @@ public class BankView extends javax.swing.JFrame {
      */
     static JLayeredPane getPaneView()
     {
-        return getBankViewInstance().getLayeredPane();
+        return getProductsViewInstance().getLayeredPane();
     }
     
-    private static BankView getBankViewInstance()
+    private static ProductsView getProductsViewInstance()
     {
-        if (bankView == null) {
-            bankView = new BankView();
+        if (productsView == null) {
+            productsView = new ProductsView();
         }
         
-        return bankView;
+        return productsView;
     }
 
     /**
@@ -57,7 +58,7 @@ public class BankView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Bank view");
+        jLabel1.setText("Products View");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,7 +67,7 @@ public class BankView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,20 +97,20 @@ public class BankView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BankView().setVisible(true);
+                new ProductsView().setVisible(true);
             }
         });
     }

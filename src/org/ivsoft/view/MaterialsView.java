@@ -11,18 +11,18 @@ import javax.swing.JLayeredPane;
  *
  * @author m
  */
-public class BankView extends javax.swing.JFrame {
-    
+public class MaterialsView extends javax.swing.JFrame {
+
     /**
      * Singleton instance
      */
-    private static BankView bankView;
+    private static MaterialsView materialsView;
 
     
     /**
      * Creates new form BankView
      */
-    private BankView() {
+    private MaterialsView() {
         initComponents();
     }
     
@@ -32,16 +32,16 @@ public class BankView extends javax.swing.JFrame {
      */
     static JLayeredPane getPaneView()
     {
-        return getBankViewInstance().getLayeredPane();
+        return getMaterialsViewInstance().getLayeredPane();
     }
     
-    private static BankView getBankViewInstance()
+    private static MaterialsView getMaterialsViewInstance()
     {
-        if (bankView == null) {
-            bankView = new BankView();
+        if (materialsView == null) {
+            materialsView = new MaterialsView();
         }
         
-        return bankView;
+        return materialsView;
     }
 
     /**
@@ -57,7 +57,7 @@ public class BankView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Bank view");
+        jLabel1.setText("Materials View");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,7 +66,7 @@ public class BankView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,20 +96,20 @@ public class BankView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaterialsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaterialsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaterialsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BankView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MaterialsView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BankView().setVisible(true);
+                new MaterialsView().setVisible(true);
             }
         });
     }
