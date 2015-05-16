@@ -59,7 +59,12 @@ public class EntryWindowView extends javax.swing.JFrame {
         });
 
         spr1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        spr1.setPreferredSize(new java.awt.Dimension(2, 0));
+
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         spr2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -98,7 +103,7 @@ public class EntryWindowView extends javax.swing.JFrame {
             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
             .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(spr1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(spr1)
             .addComponent(spr2)
             .addComponent(spr3)
             .addComponent(spr4)
@@ -164,8 +169,12 @@ public class EntryWindowView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        replaceLayeredPaneView(MaterialsView.getPaneView());
+        replaceLayeredPaneView(CashView.getPaneView());
     }//GEN-LAST:event_btn1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        replaceLayeredPaneView(BankView.getPaneView());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * Replaces layered pane in lypForm 
